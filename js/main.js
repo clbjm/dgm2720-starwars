@@ -1,20 +1,42 @@
-import {films} from '../data/films.js';
-import {people} from '../data/people.js';
-import {planets} from '../data/planets.js';
-import {species} from '../data/species.js';
-import {starships} from '../data/starships.js';
-import {vehicles} from '../data/vehicles.js';
+import {
+    films
+} from '../data/films.js';
+import {
+    people
+} from '../data/people.js';
+import {
+    planets
+} from '../data/planets.js';
+import {
+    species
+} from '../data/species.js';
+import {
+    starships
+} from '../data/starships.js';
+import {
+    vehicles
+} from '../data/vehicles.js';
 
 
 let filmList = document.querySelector('#filmList')
 
 
 for (let i = 0; i < films.length; i++) {
-    console.log(`the loop counter is: ${i} while the film episode id is: ${films[i].episode_id}`)
-    let filmItem = document.createElement(`li`)
-    filmItem.textContent = films[i].title
-    filmList.appendChild(filmItem)
+
+    const foundFilm = films.find(film => getLastNumber(film.url) === (i + 1).toString())
+    let posterFig = document.createElement('figure')
+    let figImg = document.createElement('img')
+    figImg.src = `https://starwars-visualguide.com/assets/img/films/${i + 1}.jpg`
+    let figCaption = document.createElement(`figcaption`)
+
+    figCaption.textContent = foundFilm.title
+    posterFig.appendChild(figImg)
+    posterFig.appendChild(figCaption)
+
+    filmList.appendChild(posterFig)
 }
+
 function getLastNumber(url) {
-    
+    let end = url.lastIndexOf('/')
+    return url.charAt(end - 1)
 }
