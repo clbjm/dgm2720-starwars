@@ -6,15 +6,15 @@ import {starships} from '../data/starships.js';
 import {vehicles} from '../data/vehicles.js';
 
 
+let filmList = document.querySelector('#filmList')
 
-console.log(films);
 
-let filmOne = document.querySelector('#film1');
-let filmTwo = document.querySelector('#film2');
-
-filmOne.textContent = films[2].title
-filmTwo.textContent = films[1].title
-
-for (var i = 0; i < films.length; i++) {
-    console.log(films[i]);
+for (let i = 0; i < films.length; i++) {
+    console.log(`the loop counter is: ${i} while the film episode id is: ${films[i].episode_id}`)
+    let filmItem = document.createElement(`li`)
+    filmItem.textContent = films[i].title
+    filmList.appendChild(filmItem)
+}
+function getLastNumber(url) {
+    
 }
