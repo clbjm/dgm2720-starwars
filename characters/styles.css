@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: lightblue;
+}
+figure > img {
+    height: 200px;
+}
+#main {
+display: flex;
+flex-wrap: wrap;
+}
+figure {
+    margin: 1em;
+}
+figcaption {
+    text-align: center;
+    background-color: black;
+    color: #fff;
+}
