@@ -5,7 +5,7 @@ import {
 const mainElement = document.querySelector('#main')
 
 const mainHeader = document.createElement('header')
-
+mainHeader.remove(maleCharacters)
 const maleButton = document.createElement('button')
 maleButton.textContent = 'male characters'
 mainHeader.appendChild(maleButton)
@@ -13,6 +13,7 @@ mainHeader.appendChild(maleButton)
 maleButton.addEventListener('click', () => {
     populateDOM(maleCharacters)
 })
+
 const naButton = document.createElement('button')
 naButton.textContent = 'n/a characters'
 mainHeader.appendChild(naButton)
@@ -38,10 +39,10 @@ noneButton.addEventListener('click', () => {
 })
 const noneCharacters = people.filter(person => person.gender === 'none')
 
-populateDOM(maleCharacters)
-populateDOM(femaleCharacters)
-populateDOM(noneCharacters)
-populateDOM(naCharacters)
+// populateDOM(maleCharacters)
+// populateDOM(femaleCharacters)
+// populateDOM(noneCharacters)
+// populateDOM(naCharacters)
 
 function populateDOM(characters) {
 characters.forEach((person) => {
