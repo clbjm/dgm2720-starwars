@@ -12,14 +12,12 @@ mainHeader.appendChild(maleButton)
 maleButton.addEventListener('click', () => {
     populateDOM(maleCharacters)
 })
-
-const naButton = document.createElement('button')
-naButton.textContent = 'n/a characters'
-mainHeader.appendChild(naButton)
-naButton.addEventListener('click', () => {
-    populateDOM(naCharacters)
+const othersButton = document.createElement('button')
+othersButton.textContent = 'Other characters'
+mainHeader.appendChild(othersButton)
+othersButton.addEventListener('click', () => {
+    populateDOM(otherCharacters)
 })
-
 const femaleButton = document.createElement('button')
 femaleButton.textContent = 'female characters'
 mainHeader.appendChild(femaleButton)
@@ -29,7 +27,6 @@ femaleButton.addEventListener('click', () => {
 document.body.insertBefore(mainHeader, mainElement)
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
-const naCharacters = people.filter(person => person.gender === 'n/a')
 const noneButton = document.createElement('button')
 noneButton.textContent = 'none characters'
 mainHeader.appendChild(noneButton)
@@ -42,6 +39,12 @@ const noneCharacters = people.filter(person => person.gender === 'none')
 // populateDOM(femaleCharacters)
 // populateDOM(noneCharacters)
 // populateDOM(naCharacters)
+const otherCharacters = people.filter(person => {
+    if (person.gender === 'n/a' || 
+    person.gender === 'hermaphodite') {
+        return person
+    }
+})
 
 function populateDOM(characters) {
     removeChildren(mainElement)
