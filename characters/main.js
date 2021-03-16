@@ -5,7 +5,6 @@ import {
 const mainElement = document.querySelector('#main')
 
 const mainHeader = document.createElement('header')
-mainHeader.remove(maleCharacters)
 const maleButton = document.createElement('button')
 maleButton.textContent = 'male characters'
 mainHeader.appendChild(maleButton)
@@ -45,6 +44,7 @@ const noneCharacters = people.filter(person => person.gender === 'none')
 // populateDOM(naCharacters)
 
 function populateDOM(characters) {
+    removeChildren(mainElement)
 characters.forEach((person) => {
 const charfigure = document.createElement('figure')
 const charImg = document.createElement('img')
@@ -66,4 +66,9 @@ function getLastNumber(url) {
         start++
     }
     return url.slice(start, end)
+}
+function removeChildren(container) {
+while(container.firstChild) {
+    container.removeChild(container.firstChild)
+}
 }
