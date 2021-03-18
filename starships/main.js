@@ -23,12 +23,15 @@ function populateShipView(shipData) {
     let shipImage = document.createElement('img')
     shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
     shipImage.addEventListener('error', (err) => {
-        console.log("oops! we are searching the galaxy for this ship")
+        alert("oops! we are searching the galaxy for your ship")
         shipImage.hidden = true
     })
     shipView.appendChild(shipImage)
 }
-
+function addStarField(element, numStars) {
+    element.style.setProperty('background-color', '#000')
+}
+addStarField(document.querySelector('body', 1000))
 populateNav(starships)
 
 populateShipView()

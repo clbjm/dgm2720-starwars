@@ -4,6 +4,11 @@
 body {
     background-color: black;
 }
+a {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
 #filmList {
 display: flex;
 flex-wrap: wrap;
@@ -15,4 +20,7 @@ figcaption {
     text-align: center;
     background-color: black;
     color: #fff;
+}
+header {
+    color: white;
 }

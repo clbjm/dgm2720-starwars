@@ -2,7 +2,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 li {
     list-style-type: none;
 }
@@ -12,14 +11,13 @@ a {
 }
 body {
     background-color: black;
-
 }
-/* a:visited {
-    background-color: white;
-    border-color: white;
-    color: red;
-} */
 main {
     display: flex;
-    width: 100%;
+}
+h1 {
+    color: white;
+}
+footer {
+    color: white;
 }
