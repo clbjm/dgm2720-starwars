@@ -1,7 +1,7 @@
 import {
     people
-} from '../data/people.js';
-import {getLastNumber, removeChildren} from '../utils/index.js'
+} from '../people.js'
+import {getLastNumber, removeChildren} from '../../utils/index.js'
 
 const mainElement = document.querySelector('#main')
 
