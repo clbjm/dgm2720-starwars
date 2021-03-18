@@ -9,7 +9,7 @@ const mainHeader = document.createElement('header')
 const maleButton = document.createElement('button')
 maleButton.textContent = 'male characters'
 mainHeader.appendChild(maleButton)
-
+ 
 maleButton.addEventListener('click', () => {
     populateDOM(maleCharacters)
 })
