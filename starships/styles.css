@@ -6,3 +6,20 @@
 li {
     list-style-type: none;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
+body {
+    background-color: black;
+
+}
+/* a:visited {
+    background-color: white;
+    border-color: white;
+    color: red;
+} */
+main {
+    display: flex;
+    width: 100%;
+}

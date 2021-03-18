@@ -1,6 +1,7 @@
 import {
     people
 } from '../data/people.js';
+import {getLastNumber, removeChildren} from '../utils/index.js'
 
 const mainElement = document.querySelector('#main')
 
@@ -35,10 +36,6 @@ noneButton.addEventListener('click', () => {
 })
 const noneCharacters = people.filter(person => person.gender === 'none')
 
-// populateDOM(maleCharacters)
-// populateDOM(femaleCharacters)
-// populateDOM(noneCharacters)
-// populateDOM(naCharacters)
 const otherCharacters = people.filter(person => {
     if (person.gender === 'n/a' || 
     person.gender === 'hermaphodite') {
@@ -61,17 +58,4 @@ charfigure.appendChild(charCaption)
 
 mainElement.appendChild(charfigure)
 })
-}
-function getLastNumber(url) {
-    let end = url.lastIndexOf('/')
-    let start = end - 2
-    if (url.charAt(start) === '/') {
-        start++
-    }
-    return url.slice(start, end)
-}
-function removeChildren(container) {
-while(container.firstChild) {
-    container.removeChild(container.firstChild)
-}
 }
