@@ -31,4 +31,3 @@ function populatePlanetView(planetData) {
     planetView.appendChild(planetImage)
 }
 populateNav(planets)
-populatePlanetView()

@@ -5,8 +5,7 @@ body {
     background-color: black;
 }
 a {
-    display: flex;
-    flex-wrap: wrap;
+
     color: white;
 }
 #filmList {
