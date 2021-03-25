@@ -5,17 +5,17 @@ const nav = document.querySelector('nav')
 const navList = document.querySelector('.navList')
 const shipView = document.querySelector('.shipView')
 
-const dialog = document.querySelector('.modal')
-const closeButton = document.querySelector('.modal-class')
+// const dialog = document.querySelector('.modal')
+// const closeButton = document.querySelector('.modal-class')
 
-const modalBackground = document.querySelector('.modal-background')
+// const modalBackground = document.querySelector('.modal-background')
 
-closeButton.addEventListener('click', () => {
-    dialog.classList.toggle("is-active")
-})
-modalBackground.addEventListener('click', () => {
-    dialog.classList.toggle("is-active")
-})
+// closeButton.addEventListener('click', () => {
+//     dialog.classList.toggle("is-active")
+// })
+// modalBackground.addEventListener('click', () => {
+//     dialog.classList.toggle("is-active")
+// })
 function populateNav(starships) {
     starships.forEach(starship => {
         let anchorWrap = document.createElement('a')
@@ -34,9 +34,9 @@ function populateShipView(shipData) {
     let shipImage = document.createElement('img')
     shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
     shipImage.addEventListener('error', (err) => {
-        console.log("oops! we are searching the galaxy for your ship")
+        alert("oops! we are searching the galaxy for your ship")
         shipImage.hidden = true
-        dialog.classList.toggle("is-active")
+        // dialog.classList.toggle("is-active")
     })
     shipView.appendChild(shipImage)
 }
