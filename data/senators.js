@@ -1,13 +1,5 @@
 export const senators = [
     {
-    "status": "OK",
-    "copyright": " Copyright (c) 2019 Pro Publica Inc. All Rights Reserved.",
-    "results": [{
-        "congress": "116",
-        "chamber": "Senate",
-        "num_results": 100,
-        "offset": 0,
-        "members": [{
                 "id": "A000360",
                 "title": "Senator, 2nd Class",
                 "short_title": "Sen.",
@@ -4608,6 +4600,3 @@ export const senators = [
                 "votes_with_party_pct": 95.12
             }
         ]
-    }]
-}
-]
