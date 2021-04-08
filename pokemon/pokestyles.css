@@ -38,3 +38,7 @@ perspective: 600px;
 .card__face--back {
     background-color: blue;
 }
+.card__face--front {
+    background-color: red;
+    backface-visibility: visible;
+}
