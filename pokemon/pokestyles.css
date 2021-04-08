@@ -37,8 +37,11 @@ perspective: 600px;
 }
 .card__face--back {
     background-color: blue;
+    transform: rotateY(180deg);
 }
 .card__face--front {
     background-color: red;
-    backface-visibility: visible;
+}
+.button.is-primary {
+    background-color: red;
 }
