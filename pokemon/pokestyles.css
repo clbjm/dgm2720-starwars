@@ -42,6 +42,6 @@ perspective: 600px;
 .card__face--front {
     background-color: red;
 }
-.button.is-primary {
+#submitButton {
     background-color: red;
 }
