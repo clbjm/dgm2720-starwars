@@ -58,6 +58,7 @@ function loadPage() {
 }
 
 function populatePokeCard(singlePokemon) {
+    removeChildren(singlePokemon)
     let pokeScene = document.createElement('div')
     pokeScene.className = 'scene'
     let pokeCard = document.createElement('div')
