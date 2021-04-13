@@ -1,3 +1,5 @@
+import { getLastNumber, removeChildren } from '../utils/index.js'
+
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 const fetchButton = document.querySelector('#fetchSelectedPokemon')
@@ -6,6 +8,9 @@ const dialog = document.querySelector('.modal')
 const closeButton = document.querySelector('.modal-close')
 const modalBackground = document.querySelector('.modal-background')
 const submitButton = document.querySelector('#submitButton')
+
+let inputValue 
+
 closeButton.addEventListener('click', () => {
     dialog.classList.toggle("is-active")
 })
@@ -25,8 +30,9 @@ fetchButton.addEventListener('click', () => {
     )
 })
 submitButton.addEventListener('click', () => {
-    const inputValue = document.querySelector('.input')
-    console.log(inputValue)
+    let inputField = document.querySelector('.input')
+    let inputValue = inputField.value
+
 })
 async function getAPIData(url) {
     try {
