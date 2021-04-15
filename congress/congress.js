@@ -20,7 +20,7 @@ missedVotesButton.addEventListener('click', () => {
     alert(`${missedVotesRep.name} missed votes ${missedVotesRep.missed_votes_pct}% of the time`)
 })
 partyHackButton.addEventListener('click', () => {
-console.log(partyHack)
+alert(`there are ${partyHackArray.length} represnatativies who vote with their party ${partyHack.vote_with_party_pct} % of time`)
 })
 
 function populateCongressGrid(simplePeople) {
@@ -74,4 +74,7 @@ const missedVotes = getSimplifiedCongress(representatives).filter((rep) => rep.t
 .reduce((acc, rep) => acc.missed_votes_pct > rep.missed_votes_pct ? acc : rep)
  }
 const partyHack = getSimplifiedCongress(representatives).filter((rep) => rep.title === 'Representative').reduce((acc, rep) => acc.votes_with_party_pct > rep.votes_with_party_pct ? acc : rep)
+const partyHackArray = getSimplifiedCongress(representatives).filter((person) => {
+    return person.votes_with_party_pct === partyHack.votes_with_party_pct
+})
 populateCongressGrid(getSimplifiedCongress(senators))
