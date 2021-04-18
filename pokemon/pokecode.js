@@ -94,8 +94,11 @@ function populateCardBack(pokemon) {
     let pokeBack = document.createElement('div')
     pokeBack.className = 'card__face card__face--back'
     let backLabel = document.createElement('p')
+let backLabel1 = document.createElement('p')
     backLabel.textContent = `moves: ${pokemon.moves.length}`
+backLabel1.textContent = `types: ${pokemon.type.length}`
     pokeBack.appendChild(backLabel)
+pokeBack.appendChild(backLabel1)
     return pokeBack
 }
 function getImageFileName(pokemon) {
