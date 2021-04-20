@@ -100,16 +100,12 @@ function populateCardFront(pokemon) {
     let pokeType1 = pokemon.types[0].type.name
     if (pokemon.types.length > 1) {
         let pokeType2 = pokemon.types[1].type.name
-        pokeFront.style.setProperty(
-            'background',
-            `linear-gradient(${getPokeTypeColor(pokeType1)}, $
-            {getPokeTypeColor(
-                pokeType2,
-            )}),`
-        )
+        pokeFront.style.setProperty('background', 
+        `linear-gradient(
+            ${getPokeTypeColor(pokeType1)}, 
+            ${getPokeTypeColor(pokeType2,)})`,)
     } else {
-        pokeFront.style.setProperty('background', getPokeTypeColor
-        (pokeType1))
+        pokeFront.style.setProperty('background', getPokeTypeColor(pokeType1))
     }
 
     pokeFront.appendChild(frontLabel)
@@ -147,31 +143,58 @@ function getPokeTypeColor(pokeType) {
     let color
     switch (pokeType) {
         case 'grass':
-            color = '#008000'
+            color = '#71C558'
             break;
         case 'fire':
-            color = '#f00'
+            color = '#EA7A3C'
             break;
         case 'water':
-            color = '#00f'
+            color = '#539AE2'
             break;
         case 'bug':
-            color = '#7fff00'
+            color = '#94BC4A'
             break;
         case 'normal':
-            color = '#f5f5dc'
+            color = '#AAB09F'
             break;
         case 'flying':
-            color = '#00ffff'
+            color = '#7DA6DE'
             break;
-            case 'ghost':
+        case 'ghost':
             color = '#11FAC9'
             break;
         case 'poison':
-            color = '#c300ff'
+            color = '#B468B7'
             break;
         case 'electric':
-            color = '#caff0'
+            color = '#E5C531'
+            break;
+        case 'dark':
+            color = '#736C75'
+            break;
+        case 'dragon':
+            color = '#6A7BAF'
+            break;
+        case 'fairy':
+            color = '#E397D1'
+            break;
+        case 'fighting':
+            color = '#CB5F48'
+            break;
+        case 'ground':
+            color = '#CC9F4F'
+            break;
+        case 'ice':
+            color = '#70CBD4'
+            break;
+        case 'psychic':
+            color = '#E5709B'
+            break;
+        case 'rock':
+            color = '#B2A061'
+            break;
+        case 'steel':
+            color = '#89A1B0'
             break;
         default:
             color = '#777'
