@@ -85,7 +85,7 @@ frontLabel.textContent = pokemon.name
 let frontImage = document.createElement('img')
 frontImage.src = getImageFileName(pokemon)
 let pokeType = pokemon.types[0].type.name
-pokeFront.classList.add(pokeType) s
+pokeFront.classList.add(pokeType)
 
 pokeFront.appendChild(frontLabel)
 pokeFront.appendChild(frontImage)
@@ -96,7 +96,6 @@ function populateCardBack(pokemon) {
     let pokeBack = document.createElement('div')
     pokeBack.className = 'card__face card__face--back'
     let backLabel = document.createElement('p')
-<<<<<<< HEAD
     backLabel.textContent = `Moves: ${pokemon.moves.length}`
     pokeBack.appendChild(backLabel)
 
@@ -106,13 +105,11 @@ function populateCardBack(pokemon) {
         // getPokemonType(pokeType.type.name)
     pokeBack.appendChild(backType)
     })
-=======
 let backLabel1 = document.createElement('p')
     backLabel.textContent = `moves: ${pokemon.moves.length}`
 backLabel1.textContent = `types: ${pokemon.type.length}`
     pokeBack.appendChild(backLabel)
 pokeBack.appendChild(backLabel1)
->>>>>>> 9feba836eb0a4f1cf9c36054ca2dd5ef0af3d2fb
     return pokeBack
 }
 function getImageFileName(pokemon) {
