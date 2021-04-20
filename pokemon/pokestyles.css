@@ -39,27 +39,8 @@ perspective: 600px;
     background-color: gray;
     transform: rotateY(180deg);
 }
-.card__face--front {
-    /* background-color: red; */
-}
+/* .card__face--front {
+    /* background-color: red; }*/
 #submitButton {
     background-color: red;
-}
-.grass {
-  background-color: green;
-}
-.fire {
-  background-color: red;
-}
-.water {
-  background-color: blue;
-}
-.bug {
-  background-color: chartreuse;
-}
-.normal {
-  background-color: beige;
-}
-.flying {
-  background-color: aqua;
 }
