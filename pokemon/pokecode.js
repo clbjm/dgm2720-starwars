@@ -122,8 +122,13 @@ function populateCardBack(pokemon) {
 
     pokemon.types.forEach((pokeType) => {
         let backType = document.createElement('p')
-        backType.textContent = pokeType.type.name
+        backType.textContent = `Type: ${pokeType.type.name}`
         pokeBack.appendChild(backType)
+    })
+    pokemon.abilities.forEach((pokeAbility) => {
+        let backAbility = document.createElement('p')
+        backAbility.textContent = `Ability: ${pokeAbility.ability.name}`
+        pokeBack.appendChild(backAbility)
     })
     return pokeBack
 }
